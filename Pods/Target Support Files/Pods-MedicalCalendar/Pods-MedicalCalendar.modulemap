@@ -1,0 +1,6 @@
+framework module Pods_MedicalCalendar {
+  umbrella header "Pods-MedicalCalendar-umbrella.h"
+
+  export *
+  module * { export * }
+}

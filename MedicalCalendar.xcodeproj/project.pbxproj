@@ -12,9 +12,12 @@
 		7B33FADF205DDBB1005B2E8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B33FADD205DDBB1005B2E8C /* Main.storyboard */; };
 		7B33FAE1205DDBB1005B2E8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B33FAE0205DDBB1005B2E8C /* Assets.xcassets */; };
 		7B33FAE4205DDBB1005B2E8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B33FAE2205DDBB1005B2E8C /* LaunchScreen.storyboard */; };
+		7B33FAEC205DDDD6005B2E8C /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B33FAEB205DDDD6005B2E8C /* CustomCell.swift */; };
+		8F78B3DD2C434392F896BC23 /* Pods_MedicalCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32198FE4FA2E97984CAC0AF2 /* Pods_MedicalCalendar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32198FE4FA2E97984CAC0AF2 /* Pods_MedicalCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedicalCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B33FAD6205DDBB1005B2E8C /* MedicalCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicalCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B33FAD9205DDBB1005B2E8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B33FADB205DDBB1005B2E8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,9 @@
 		7B33FAE0205DDBB1005B2E8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B33FAE3205DDBB1005B2E8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B33FAE5205DDBB1005B2E8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B33FAEB205DDDD6005B2E8C /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		D2230FC6E12E153F0CD79019 /* Pods-MedicalCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicalCalendar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MedicalCalendar/Pods-MedicalCalendar.debug.xcconfig"; sourceTree = "<group>"; };
+		DC01B09CD8A9D2E186C82C72 /* Pods-MedicalCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicalCalendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-MedicalCalendar/Pods-MedicalCalendar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F78B3DD2C434392F896BC23 /* Pods_MedicalCalendar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4620B00500CA53FF4303F175 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D2230FC6E12E153F0CD79019 /* Pods-MedicalCalendar.debug.xcconfig */,
+				DC01B09CD8A9D2E186C82C72 /* Pods-MedicalCalendar.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7B33FACD205DDBB1005B2E8C = {
 			isa = PBXGroup;
 			children = (
 				7B33FAD8205DDBB1005B2E8C /* MedicalCalendar */,
 				7B33FAD7205DDBB1005B2E8C /* Products */,
+				4620B00500CA53FF4303F175 /* Pods */,
+				E434F041C86A5A90FEE145A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +78,17 @@
 				7B33FAE0205DDBB1005B2E8C /* Assets.xcassets */,
 				7B33FAE2205DDBB1005B2E8C /* LaunchScreen.storyboard */,
 				7B33FAE5205DDBB1005B2E8C /* Info.plist */,
+				7B33FAEB205DDDD6005B2E8C /* CustomCell.swift */,
 			);
 			path = MedicalCalendar;
+			sourceTree = "<group>";
+		};
+		E434F041C86A5A90FEE145A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32198FE4FA2E97984CAC0AF2 /* Pods_MedicalCalendar.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B33FAE8205DDBB1005B2E8C /* Build configuration list for PBXNativeTarget "MedicalCalendar" */;
 			buildPhases = (
+				87F77B1DE83FFDCE47617F2E /* [CP] Check Pods Manifest.lock */,
 				7B33FAD2205DDBB1005B2E8C /* Sources */,
 				7B33FAD3205DDBB1005B2E8C /* Frameworks */,
 				7B33FAD4205DDBB1005B2E8C /* Resources */,
+				A844CE14FA4C27FF6A040DD3 /* [CP] Embed Pods Frameworks */,
+				B050D3F162C3041737F649CF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,12 +161,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		87F77B1DE83FFDCE47617F2E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MedicalCalendar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A844CE14FA4C27FF6A040DD3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MedicalCalendar/Pods-MedicalCalendar-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MedicalCalendar/Pods-MedicalCalendar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B050D3F162C3041737F649CF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MedicalCalendar/Pods-MedicalCalendar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7B33FAD2205DDBB1005B2E8C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7B33FADC205DDBB1005B2E8C /* ViewController.swift in Sources */,
+				7B33FAEC205DDDD6005B2E8C /* CustomCell.swift in Sources */,
 				7B33FADA205DDBB1005B2E8C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +357,7 @@
 		};
 		7B33FAE9205DDBB1005B2E8C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2230FC6E12E153F0CD79019 /* Pods-MedicalCalendar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +373,7 @@
 		};
 		7B33FAEA205DDBB1005B2E8C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC01B09CD8A9D2E186C82C72 /* Pods-MedicalCalendar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
