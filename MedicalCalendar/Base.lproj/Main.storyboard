@@ -18,11 +18,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="buttonImage" translatesAutoresizingMaskIntoConstraints="NO" id="s7a-6K-ppG">
+                                <rect key="frame" x="314" y="20" width="45" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Lie-0H-Zd3">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="334.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="384.5"/>
                                 <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RgM-1H-aAf">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eg8-Av-tOi">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdk-kO-VDR">
+                                                <rect key="frame" x="0.0" y="20.5" width="375" height="29.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ENe-KU-4mz">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="50" width="375" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awf-kN-Ekd">
                                                 <rect key="frame" x="0.0" y="0.0" width="53.5" height="20.5"/>
@@ -79,8 +100,8 @@
                                         </constraints>
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vcQ-p2-cIG" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
-                                        <rect key="frame" x="0.0" y="20.5" width="375" height="314"/>
-                                        <color key="backgroundColor" red="0.30724766850471497" green="0.2633076012134552" blue="0.43931213021278381" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <rect key="frame" x="0.0" y="70.5" width="375" height="314"/>
+                                        <color key="backgroundColor" red="0.32226291298866272" green="0.2617110013961792" blue="0.392255038022995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="314" id="6JT-9p-ckl"/>
                                         </constraints>
@@ -138,20 +159,22 @@
                                     </collectionView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="334.5" id="mNn-Cn-pz9"/>
+                                    <constraint firstAttribute="height" constant="384.5" id="gYB-5S-08N"/>
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.22745098039215686" green="0.16078431372549018" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Lie-0H-Zd3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="EFS-5u-DEE"/>
                             <constraint firstItem="Lie-0H-Zd3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Wpg-va-Gbb"/>
                             <constraint firstItem="Lie-0H-Zd3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XQm-tL-T0L"/>
-                            <constraint firstItem="Lie-0H-Zd3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iAK-5n-70o"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="calendarView" destination="vcQ-p2-cIG" id="WHE-ie-Zmy"/>
+                        <outlet property="monthLabel" destination="Zdk-kO-VDR" id="rUY-7I-sqU"/>
+                        <outlet property="yearLabel" destination="Eg8-Av-tOi" id="6wj-fd-6dh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -159,4 +182,7 @@
             <point key="canvasLocation" x="125.59999999999999" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="buttonImage" width="60" height="50"/>
+    </resources>
 </document>
