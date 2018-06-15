@@ -29,8 +29,9 @@ class ViewController: UIViewController {
         //setup calendar spacing
         
         super.viewDidLoad()
+        
         setupCalendarView()
-        // setup labels
+       
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -40,6 +41,9 @@ class ViewController: UIViewController {
         calendarView.minimumLineSpacing = 0
         calendarView.minimumInteritemSpacing = 0
         
+        //goes to todays date
+        calendarView.scrollToDate(Date(), animateScroll: false)
+        calendarView.selectDates([Date()])
         //setup labels
         calendarView.visibleDates(){ (visibleDates) in
         self.setUpViewsOfCalendar(from: visibleDates)
