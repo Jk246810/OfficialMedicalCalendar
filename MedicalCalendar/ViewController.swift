@@ -19,20 +19,21 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var monthLabel: UILabel!
     
+    @IBOutlet weak var dayView: UIView!
+    @IBOutlet weak var addButton: UIButton!
+    
     let outsideMonthColor = UIColor(hex: 0x584a66)
     let monthColor = UIColor.white
     let selectedMonthColor = UIColor(hex: 0x3a294b)
     let currentDateSelectedViewColor = UIColor(hex: 0x4e3f5d)
     let formatter = DateFormatter()
-    
+    var dateOfRecord: Date?
     override func viewDidLoad() {
         //setup calendar spacing
         
         super.viewDidLoad()
         
         setupCalendarView()
-       
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
     func setupCalendarView()
@@ -55,6 +56,8 @@ class ViewController: UIViewController {
          guard let validCell = view as? CustomCell else{return}
         if cellState.isSelected{
             validCell.selectedView.isHidden = false
+            dateOfRecord = cellState.date
+            print(dateOfRecord)
         }else{
             validCell.selectedView.isHidden = true
         }
@@ -140,6 +143,16 @@ extension ViewController: JTAppleCalendarViewDelegate{
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
         setUpViewsOfCalendar(from: visibleDates)
     }
+}
+
+extension ViewController{
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addSegue"{
+            let vc = segue.destination as! DataSheet
+            vc.date = dateOfRecord
+        }
+    }
+  
 }
 
 extension UIColor{
